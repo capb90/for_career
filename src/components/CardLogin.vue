@@ -1,0 +1,72 @@
+<template>
+    <div class="d-flex justify-content-center align-items-center vh-100 login-main">
+        <div class="card card-login ">
+            <div class="card-body">
+                <span class="card-title text-center mb-4 d-flex justify-content-center align-items-center">
+                    <img alt="logo por una carrera" src="../assets/logo-app.svg" />
+                </span>
+                <slot></slot>
+                <div class="card-summary">
+                    <a>{{ labelSummary }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+
+    name: 'CardLogin',
+    props: {
+        labelSummary: String
+    }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.login-main {
+    background-color: #F6F5F4;
+}
+
+.card-login {
+    width: 537px;
+    height: 576px;
+}
+
+.card {
+    padding: 12px 32px 16px;
+    border-radius: 24px;
+    border: 1px solid #E5E5E5;
+}
+
+.card-summary {
+    color: #2946FA;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    position: absolute;
+    bottom: 16px;
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .card-login {
+        width: 90%;
+        height: auto;
+        margin: 32px 16px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .card-login {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        margin: 32px 16px;
+    }
+}
+</style>
