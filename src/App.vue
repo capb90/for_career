@@ -1,20 +1,27 @@
 <template>
   <div id="app">
-    <CardLogin labelSummary="Registrarse">
+    <!-- <CardLogin labelSummary="Registrarse">
       <FormResetPassword/>
-    </CardLogin>
+    </CardLogin> -->
+    <MainLayout>
+      <template #header>
+        <HeaderLayout />
+
+      </template>
+    </MainLayout>
   </div>
 </template>
 
 <script>
-import FormResetPassword from './components/FormResetPassword.vue';
-import CardLogin from './components/CardLogin';
+import HeaderLayout from './components/HeaderLayout.vue';
+import MainLayout from './components/MainLayout.vue';
+
 
 export default {
   name: 'App',
   components: {
-    CardLogin,
-    FormResetPassword
+    HeaderLayout,
+    MainLayout
   }
 }
 </script>
