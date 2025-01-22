@@ -13,54 +13,31 @@
                 <small class="help-text">Rut sin puntos, sin guion y sin digito verificador. Ejemplo: 177078393</small>
             </div>
         </div>
-        <div class="form-group">
-            <label for="password" class="login-label">Contraseña</label>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                        <LockOutline />
-                    </span>
-                </div>
-                <input :type="statusPassword?'text':'password'" class="form-control" placeholder="Contraseña" aria-label="Username"
-                    aria-describedby="basic-addon1">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" v-model="statusPassword" id="defaultCheck1">
-                <label class="form-check-label" for="defaultCheck1">
-                    Mostrar contraseña
-                </label>
-            </div>
-        </div>
         <button type="submit" class="btn btn-primary btn-block mt-3 w-100">
-            Iniciar sesión
+            Recuperar contraseña
         </button>
         <button type="button" class="btn btn-custom btn-block mt-3 w-100">
-            Registrarse
+            Cancelar
         </button>
     </form>
 </template>
 
 <script>
 import AccountOutline from 'vue-material-design-icons/AccountOutline.vue'
-import LockOutline from 'vue-material-design-icons/LockOutline.vue'
 
 export default {
-    name: 'FormLogin',
+    name: 'FormResetPassword',
     data() {
 
         return {
             typeInputPassword: String,
-            statusPassword: false
         }
     },
     components: {
         AccountOutline,
-        LockOutline
     },
-    methods:{
-        handleSubmit(){
+    methods: {
+        handleSubmit() {
             console.log('EVENT FORM')
         }
     }

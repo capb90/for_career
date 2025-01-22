@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <CardLogin labelSummary="¿Has olvidado tu contraseña?">
-      <FormLogin/>
+    <CardLogin labelSummary="Registrarse">
+      <FormResetPassword/>
     </CardLogin>
   </div>
 </template>
 
 <script>
-import FormLogin from './components/FormLogin';
+import FormResetPassword from './components/FormResetPassword.vue';
 import CardLogin from './components/CardLogin';
 
 export default {
   name: 'App',
   components: {
     CardLogin,
-    FormLogin
+    FormResetPassword
   }
 }
 </script>
